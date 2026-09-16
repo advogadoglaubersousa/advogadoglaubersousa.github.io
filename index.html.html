@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gláuber Sousa Advogado Previdenciário. Orientação jurídica em BPC/LOAS, auxílio por incapacidade e salário-maternidade.">
+  <title>Gláuber Sousa | Advogado Previdenciário</title>
+
+  <style>
+    :root {
+      --navy: #102a43;
+      --navy-dark: #071c2d;
+      --gold: #c49a5a;
+      --gold-light: #e3c48d;
+      --cream: #f7f4ee;
+      --white: #ffffff;
+      --text: #263746;
+      --muted: #657786;
+      --border: #e4e0d8;
+      --green: #168c55;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--navy-dark);
+      color: var(--white);
+      padding: 20px 0;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--gold);
+      display: grid;
+      place-items: center;
+      color: var(--gold-light);
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 18px;
+      letter-spacing: .4px;
+    }
+
+    .brand span {
+      color: #b9c5cf;
+      font-size: 12px;
+    }
+
+    .nav-button {
+      border: 1px solid var(--gold);
+      color: var(--white);
+      padding: 10px 18px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .hero {
+      background:
+        linear-gradient(115deg, rgba(7,28,45,.98), rgba(16,42,67,.94));
+      color: var(--white);
+      padding: 88px 0 92px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.08;
+      font-weight: 500;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span { color: var(--gold-light); }
+
+    .hero p {
+      max-width: 650px;
+      color: #d8e0e6;
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-weight: bold;
+      padding: 15px 25px;
+      border-radius: 4px;
+      transition: .2s;
+    }
+
+    .cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .hero-card {
+      border: 1px solid rgba(227,196,141,.45);
+      padding: 32px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .hero-card .number {
+      color: var(--gold-light);
+      font-family: Georgia, serif;
+      font-size: 42px;
+      margin-bottom: 4px;
+    }
+
+    .hero-card h2 {
+      font-family: Georgia, serif;
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      font-size: 15px;
+      margin: 0;
+      color: #cbd6de;
+    }
+
+    section { padding: 76px 0; }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading .eyebrow { color: var(--gold); }
+
+    h2.section-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4vw, 43px);
+      color: var(--navy);
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p { color: var(--muted); }
+
+    .services {
+      background: var(--cream);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 30px;
+      min-height: 225px;
+    }
+
+    .card-number {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-family: Georgia, serif;
+      font-size: 22px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .card p { color: var(--muted); font-size: 15px; }
+
+    .problem {
+      background: var(--white);
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .problem h2 {
+      font-family: Georgia, serif;
+      color: var(--navy);
+      font-size: 39px;
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .problem p { color: var(--muted); margin-bottom: 25px; }
+
+    .checks {
+      list-style: none;
+      display: grid;
+      gap: 15px;
+    }
+
+    .checks li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: var(--text);
+    }
+
+    .checks li::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: bold;
+      margin-top: 1px;
+    }
+
+    .callout {
+      background: var(--navy);
+      color: var(--white);
+      padding: 42px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .callout h3 {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .callout p { color: #d2dce3; font-size: 15px; }
+
+    .about {
+      background: var(--cream);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 55px;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .portrait {
+      height: 310px;
+      background: var(--navy);
+      overflow: hidden;
+      border: 7px solid var(--white);
+      outline: 1px solid var(--border);
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .about h2 {
+      font-family: Georgia, serif;
+      font-size: 38px;
+      color: var(--navy);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .oab {
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .about p { color: var(--muted); margin-bottom: 14px; }
+
+    .contact {
+      background: var(--navy-dark);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .contact p {
+      color: #ccd7df;
+      max-width: 650px;
+      margin: 0 auto 28px;
+    }
+
+    footer {
+      background: #041522;
+      color: #9eabb5;
+      padding: 28px 0 90px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: var(--green);
+      color: white;
+      padding: 13px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.22);
+      z-index: 10;
+    }
+
+    @media (max-width: 1000px) {
+      .cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 800px) {
+      .hero { padding: 65px 0; }
+      .hero-grid, .problem-grid, .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+      .cards { grid-template-columns: 1fr; }
+      .hero-card { max-width: 500px; }
+      .portrait { width: 230px; height: 250px; }
+      section { padding: 60px 0; }
+      .nav-button { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="brand-mark">GS</div>
+      <div>
+        <strong>GLÁUBER SOUSA</strong>
+        <span>ADVOCACIA PREVIDENCIÁRIA</span>
+      </div>
+    </div>
+    <a class="nav-button" href="#contato">Entrar em contato</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Advocacia Previdenciária</div>
+        <h1>Seus direitos perante o INSS merecem <span>atenção jurídica.</span></h1>
+        <p>
+          Orientação jurídica para questões envolvendo BPC/LOAS,
+          aposentadoria rural, aposentadoria urbana, auxílio por incapacidade
+          e salário-maternidade.
+        </p>
+        <a class="cta" href="https://wa.me/5577991673232" target="_blank">
+          Falar pelo WhatsApp
+        </a>
+      </div>
+
+      <div class="hero-card">
+        <div class="number">01</div>
+        <h2>Seu caso pode ser analisado.</h2>
+        <p>
+          Cada situação possui requisitos próprios. A análise individual
+          ajuda a identificar quais medidas podem ser juridicamente cabíveis.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Áreas de atuação</div>
+        <h2 class="section-title">Como posso ajudar</h2>
+        <p>Atuação concentrada em demandas previdenciárias selecionadas.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-number">01</div>
+          <h3>BPC / LOAS</h3>
+          <p>
+            Orientação para pessoa com deficiência ou pessoa idosa,
+            incluindo análise dos requisitos e da documentação.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-number">02</div>
+          <h3>Aposentadoria rural</h3>
+          <p>
+            Orientação sobre aposentadoria do trabalhador rural,
+            documentação e requisitos aplicáveis ao caso.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-number">03</div>
+          <h3>Aposentadoria urbana</h3>
+          <p>
+            Análise de requisitos, tempo de contribuição e documentação
+            para aposentadoria no regime geral.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-number">04</div>
+          <h3>Auxílio por incapacidade</h3>
+          <p>
+            Orientação em situações de incapacidade temporária para o
+            trabalho e questões relacionadas ao benefício.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-number">05</div>
+          <h3>Salário-maternidade</h3>
+          <p>
+            Análise dos requisitos e orientação jurídica para pedidos
+            relacionados ao benefício.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-number">06</div>
+          <h3>Benefício negado</h3>
+          <p>
+            Análise da decisão do INSS e avaliação das medidas
+            administrativas ou judiciais cabíveis.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-number">07</div>
+          <h3>Perícia e documentação</h3>
+          <p>
+            Orientação sobre documentação e procedimentos relevantes
+            para a análise do pedido.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-number">08</div>
+          <h3>Questões previdenciárias</h3>
+          <p>
+            Atendimento individualizado para outras questões relacionadas
+            aos benefícios e direitos previdenciários.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="problem">
+    <div class="container problem-grid">
+      <div>
+        <div class="eyebrow">Benefício negado?</div>
+        <h2>A negativa do INSS não encerra necessariamente a questão.</h2>
+        <p>
+          É importante compreender o motivo da decisão antes de definir
+          qual caminho seguir.
+        </p>
+        <a class="cta" href="https://wa.me/5577991673232" target="_blank">
+          Quero analisar meu caso
+        </a>
+      </div>
+
+      <div>
+        <ul class="checks">
+          <li>Verificação do motivo da negativa;</li>
+          <li>Análise dos documentos apresentados;</li>
+          <li>Verificação dos requisitos legais aplicáveis;</li>
+          <li>Avaliação de recurso ou medida judicial, quando cabível;</li>
+          <li>Orientação sobre os próximos passos.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <div class="callout">
+        <h3>Cada caso precisa ser analisado individualmente.</h3>
+        <p>
+          A existência de um benefício ou de uma negativa não permite,
+          por si só, concluir pelo direito à concessão. A orientação
+          jurídica depende das circunstâncias e dos documentos de cada caso.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container about-grid">
+      <div class="portrait"><img src="assets/glauber-sousa.png" alt="Gláuber Sousa, advogado" /></div>
+
+      <div>
+        <div class="eyebrow">Advocacia</div>
+        <h2>Gláuber Sousa</h2>
+        <div class="oab">ADVOGADO — OAB/BA 91244</div>
+
+        <p>
+          Atendimento jurídico voltado à área previdenciária, com foco
+          em benefícios do INSS e análise individual das necessidades de cada cliente.
+        </p>
+
+        <p>
+          Atendimento presencial em Guanambi/BA e online em todo o território nacional
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="container">
+      <div class="eyebrow">Entre em contato</div>
+      <h2>Tem uma dúvida sobre seu benefício?</h2>
+      <p>
+        Entre em contato para explicar sua situação e receber orientação
+        sobre a análise do seu caso.
+      </p>
+      <a class="cta" href="https://wa.me/5577991673232" target="_blank">
+        Falar com Gláuber Sousa
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>
+      Gláuber Sousa — Advogado — OAB/BA 91244
+    </p>
+    <p style="margin-top:8px;">
+      Atendimento presencial em Guanambi/BA e online em todo o território nacional
+    </p>
+    <p style="margin-top:8px;">
+      As informações desta página são meramente informativas e não constituem
+      garantia de resultado. Cada caso deve ser analisado individualmente.
+    </p>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5577991673232" target="_blank" aria-label="Falar pelo WhatsApp">
+  WhatsApp
+</a>
+
+</body>
+</html>
